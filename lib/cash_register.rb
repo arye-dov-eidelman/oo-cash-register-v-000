@@ -9,10 +9,13 @@ attr_reader :discount
   end
 
   def add_item(item, price, quantity = 1)
-    quantity.times{
+    quantity.times do
       @total += price
       @items << item
-    }
+    end
   end
 
+  def apply_discount
+    (@total *= discount)/100
+  end
 end
