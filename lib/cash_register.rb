@@ -17,5 +17,6 @@ attr_reader :discount
 
   def apply_discount
     @total = @total - (@total / 100 * @discount)
+    5
   end
 end
